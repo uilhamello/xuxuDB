@@ -7,11 +7,11 @@ class ClassTO extends ClassSqlUtil{
 	private $IdName;
 	private $childClass;
 	private $childClassParameters;
-	private $selectFields;
 	private $atributeDatasArray;
 	private $where;
 	private $xuxuDB_error;
 	private $queries = array();
+	protected $selected_fields;
 	protected $count;
 	protected $total_page;
 	protected $status;
@@ -641,7 +641,7 @@ class ClassTO extends ClassSqlUtil{
 	//PARAMETERS THAT USED JUST FOR INFORMATION, NOT AS A TABLE FIELD NAME
 	public function special_class_parameter_keys(){
 		
-		return array('primary_key','status','count','total_page');
+		return array('primary_key','status','count','total_page','selected_fields');
 	
 	}
 
@@ -659,8 +659,14 @@ class ClassTO extends ClassSqlUtil{
 				//If it is 'VALUE' then the ARRAY VALUE will be checked out
 				//Defualt: KEY.
 	//Return: A array without the keys with any special name.
-	public function take_out_special_class_parameter($array){
+	public function take_out_special_class_parameter($array=''){
 
+		if(empty($array)){
+
+			$array = $this->getClassParameters();
+
+		}
+		
 		$special = $this->special_class_parameter_keys();
 		$special_suffix = $this->special_class_parameter_suffix();
 		foreach($array as $key => $val ){
