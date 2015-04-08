@@ -1,0 +1,101 @@
+body{
+}
+
+
+#admin_panel{
+
+	border:1px dashed #eee;
+	width: 780px;
+	max-height:400px;
+	margin-left: 27%;
+	background: #777;
+
+}
+
+#admin_panel legend{
+	color:#fff;
+}
+
+#admin_panel_content{
+
+	background: #FFF;
+	width: 720px;
+	max-height:330px;
+	margin-left: 2%;
+	padding: 1%;
+	overflow: scroll;
+	color:#00f;
+
+}
+
+#admin_panel_content span.error{
+	color:#f00;
+}
+
+#formXuxuDB{
+
+	border-bottom: 0px;
+	border:1px ridge #999;
+	width: 880px;
+	height: 400px;
+	margin:20%;
+	margin-left: 25%;
+	margin-top:4%;
+	margin-bottom: 1%;
+	background: #FFF;
+}
+
+#formXuxuDB form{
+
+	margin:5%;
+}
+
+#formXuxuDB form p{
+	width: auto;
+}
+
+#formXuxuDB form p label{
+	width: 160px;
+	border:1px solid #000
+	display:block;
+	float:left;
+
+}
+
+#formXuxuDB form p span{
+
+	font-size: 9px;
+	background: #eee;
+	color:#00f;
+    font-size: 10px;
+}
+
+#p_conection_button{
+	margin-left: 160px;
+}
+
+#div_erro{
+	color: #f00;
+	font-size: 12;
+	font-weight: bold;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
+#div_title{
+
+	font-size: 30px;
+	color: #00F;
+	font-weight: bold;
+	float: center;
+	text-align: center;
+	margin-top:12px;
+}
+
+.loading{
+
+	margin-left: 30px;
+	margin-top: -20px;
+	height: 100px;
+
+}
