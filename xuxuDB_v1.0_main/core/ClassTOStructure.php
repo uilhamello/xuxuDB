@@ -18,7 +18,7 @@ class {{class_name}} extends ClassTO implements InterfaceTO{
 
 		parent::setFields($_fields);
 
-		parent::selected_fields($_fields);
+		$this->selected_fields = $_fields;
 
 		parent::select($_parameter);
 
