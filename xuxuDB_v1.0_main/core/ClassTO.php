@@ -516,7 +516,13 @@ class ClassTO extends ClassSqlUtil{
 	*/
 	public function select($_parameter, $_fields = array()){
 
-		parent::setFields($_fields);
+		if(!empty($_fields)){
+
+			parent::setFields($_fields);
+
+			$this->selected_fields($_fields);
+
+		}
 
 		//IF IS A NUMERIC VALUE THEN GETS THE VALUE AS A CLASS PRIMARY_KEY
 		if(is_numeric($_parameter)){
