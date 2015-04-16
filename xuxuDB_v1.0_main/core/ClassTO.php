@@ -520,7 +520,7 @@ class ClassTO extends ClassSqlUtil{
 
 			parent::setFields($_fields);
 
-			$this->selected_fields($_fields);
+			$this->selected_fields = $_fields;
 
 		}
 
