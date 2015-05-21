@@ -12,6 +12,8 @@ class {{class_name}} extends ClassTO implements InterfaceTO{
 
 	public function __construct($_parameter ="", $_fields = array()){
 
+		parent::setTable(strtolower(get_class()));
+
 		parent::__construct();
 
 		parent::setChildClass($this);
